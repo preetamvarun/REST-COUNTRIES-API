@@ -4,6 +4,7 @@ import useCountriesState from "../Hooks/useShowAllCountries";
 import Country from "./Country";
 import useFilterCountriesState from "../Hooks/useFilterCountries";
 import useFilterRegion from '../Hooks/useFilterRegion';
+import { Link } from "react-router-dom";
 
 const Countries = () => {
 
@@ -60,10 +61,13 @@ const Countries = () => {
             <div className="flex justify-evenly items-center flex-wrap">
                 {
                     filteredCountries.map((eachCountry) => 
-                    <Country name = {eachCountry.name.official} imageSrc = {eachCountry.flags.svg} 
-                    population = {eachCountry.population}
-                    capital = {eachCountry.capital} region = {eachCountry.region}
-                    />)
+                    <Link to = {`/country/${eachCountry.name.official}`}>
+                        <Country name = {eachCountry.name.official} imageSrc = {eachCountry.flags.svg} 
+                        population = {eachCountry.population}
+                        capital = {eachCountry.capital} region = {eachCountry.region}
+                        />
+                    </Link>
+                    )
                 }
             </div>
         </div>
