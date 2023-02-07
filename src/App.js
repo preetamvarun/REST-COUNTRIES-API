@@ -9,6 +9,7 @@ import { Error } from "./Error";
 const AppLayout = () => {
     return(
         <React.Fragment>
+            <Header/>
             <Outlet/>
         </React.Fragment>
     )
@@ -22,11 +23,7 @@ const appRouter = createBrowserRouter([
         children : [
             {
                 path : '/',
-                element : 
-                <React.Fragment>
-                    <Header/>
-                    <Countries/>
-                </React.Fragment>
+                element : <Countries/>
             },
             {
                 path : '/country/:name',
