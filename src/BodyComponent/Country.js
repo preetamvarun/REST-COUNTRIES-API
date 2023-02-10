@@ -1,18 +1,29 @@
-const Country = (props) => {
-    return (
-        <div className="text-white m-2 bg-slate-700 rounded-lg h-[300px] w-60 overflow-hidden">
-            <div className="h-1/2 mb-2 opacity-80 hover:opacity-[100] hover:scale-110 duration-200">
-                <img src = {props.imageSrc} alt = {props.name} className = 'w-[100%] h-[100%] object-cover'/>
-            </div>
-            <p className="font-bold text-sm p-2">{props.name}</p>
-            <div className="p-2 text-sm">
-                <p className="p-[.75px]"><span className="font-semibold">Population : </span>{props.population}</p>
-                <p className="p-[.75px]"><span className="font-semibold">Region : </span>{props.region}</p>
-                <p className="p-[.75px]"><span className="font-semibold">Capital : </span>{props.capital}</p>
-            </div>
-        </div>
-    )
-}
+import { formatPopulation } from '../utils/populationFormatter';
+
+const Country = props => {
+  return (
+    <div className="text-white m-2 bg-slate-700 rounded-lg h-[300px] w-60 overflow-hidden">
+      <div className="h-1/2 mb-2 opacity-80 hover:opacity-[100] hover:scale-110 duration-200">
+        <img src={props.imageSrc} alt={props.name} className="w-[100%] h-[100%] object-cover" />
+      </div>
+      <p className="font-bold text-sm p-2">{props.name}</p>
+      <div className="p-2 text-sm">
+        <p className="p-[.75px]">
+          <span className="font-semibold">Population : </span>
+          {formatPopulation(props.population)}
+        </p>
+        <p className="p-[.75px]">
+          <span className="font-semibold">Region : </span>
+          {props.region}
+        </p>
+        <p className="p-[.75px]">
+          <span className="font-semibold">Capital : </span>
+          {props.capital}
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export default Country;
 
