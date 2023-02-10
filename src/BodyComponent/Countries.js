@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import useCountriesState from '../Hooks/useShowAllCountries';
 import Country from './Country';
-import useFilterCountriesState from '../Hooks/useFilterCountries';
+import useFilterCountries from '../Hooks/useFilterCountries';
 import useFilterRegion from '../Hooks/useFilterRegion';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
@@ -21,11 +21,11 @@ const Countries = () => {
   }, [allCountries]);
 
   useEffect(() => {
-    setfilteredCountries(useFilterCountriesState(searchCountry, allCountries, region));
+    setfilteredCountries(useFilterCountries(searchCountry, allCountries, region));
   }, [searchCountry]);
 
   useEffect(() => {
-    setfilteredCountries(useFilterRegion(region, allCountries));
+    setfilteredCountries(useFilterRegion(region, allCountries, searchCountry));
   }, [region]);
 
   function handleSearchCountry(evt) {
@@ -55,7 +55,6 @@ const Countries = () => {
           name="Region"
           id="Region"
           className="bg-slate-600 text-gray-400 text-sm rounded-sm py-3 pl-2 outline-none"
-          value={region}
           onChange={handleRegionFilter}
         >
           <option value="Filter By Region">Filter By Region</option>
