@@ -7,7 +7,7 @@ export const useShowCountry = countryName => {
   async function getCountryData() {
     const data = await fetch(COUNTRY_API_URL + countryName + '?fullText=true');
     const json = await data.json();
-    setCountryData(json);
+    setCountryData(json[0]);
   }
 
   useEffect(() => {

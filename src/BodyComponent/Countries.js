@@ -21,7 +21,7 @@ const Countries = () => {
   }, [allCountries]);
 
   useEffect(() => {
-    setfilteredCountries(useFilterCountriesState(searchCountry, allCountries));
+    setfilteredCountries(useFilterCountriesState(searchCountry, allCountries, region));
   }, [searchCountry]);
 
   useEffect(() => {
@@ -64,9 +64,10 @@ const Countries = () => {
           <option>Americas</option>
           <option>Europe</option>
           <option>Oceania</option>
+          <option>Antarctic</option>
         </select>
       </div>
-      <div className="">
+      <div>
         <div className="max-w-[1024px] m-auto flex justify-center flex-wrap items-center">
           {filteredCountries.map(eachCountry => (
             <Link to={`/country/${eachCountry.name.official}`} key={uuidv4()}>
@@ -74,7 +75,7 @@ const Countries = () => {
                 name={eachCountry.name.common}
                 imageSrc={eachCountry.flags.svg}
                 population={eachCountry.population}
-                capital={eachCountry.capital}
+                capital={eachCountry.capital !== undefined ? eachCountry.capital : 'No Capital'}
                 region={eachCountry.region}
               />
             </Link>
