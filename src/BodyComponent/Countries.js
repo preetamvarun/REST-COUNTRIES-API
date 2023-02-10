@@ -41,12 +41,15 @@ const Countries = () => {
     return allCountries.length === 0 ? <Shimmer/> : (
         <div className="bg-slate-800">
                 <div className="max-w-[1010px] m-auto flex justify-between items-center py-8">
-                    <input 
-                    type="text" 
-                    value={searchCountry}
-                    placeholder="search for any country..." 
-                    onChange={handleSearchCountry}
-                    className="bg-slate-600 text-gray-400 placeholder:font-semibold placeholder:text-xs placeholder:pl-3 py-3 pr-36 rounded-sm outline-none pl-2"/>
+                    <div className="bg-slate-700 rounded-md">
+                        <i className="fa-solid fa-magnifying-glass text-gray-500 relative pl-4 translate-y-[15%]"></i>
+                        <input 
+                        type="text" 
+                        value={searchCountry}
+                        placeholder="search for any country..." 
+                        onChange={handleSearchCountry}
+                        className="bg-slate-700 text-gray-400 placeholder:font-semibold placeholder:text-xs placeholder:pl-1 py-3 pr-36 rounded-md outline-none pl-2"/>
+                    </div>
                     <select name = 'Region' id = 'Region' className="bg-slate-600 text-gray-400 text-sm rounded-sm py-3 pl-2 outline-none"
                     value = {region} onChange={handleRegionFilter}>
                         <option value = "Filter By Region">Filter By Region</option>

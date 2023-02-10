@@ -10,7 +10,6 @@ const Header = () => {
                     <p className="font-bold">Dark Mode</p>
                 </div>
             </div>
-            adding some new text 
         </div>
     )
 }
