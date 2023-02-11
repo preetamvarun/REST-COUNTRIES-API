@@ -5,11 +5,13 @@ import Countries from './BodyComponent/Countries';
 import Showcountry from './BodyComponent/Showcountry';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import { Error } from './Error';
+import { useState } from 'react';
 
 const AppLayout = () => {
+  const [modeColor, setModeColor] = useState('Dark Mode');
   return (
     <React.Fragment>
-      <Header />
+      <Header modeColor={modeColor} />
       <Outlet />
     </React.Fragment>
   );
