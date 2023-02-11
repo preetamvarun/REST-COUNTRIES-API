@@ -7,7 +7,7 @@ const Shimmer = () => {
         <div className="h-[300px] w-60 bg-slate-700 m-2 rounded-lg">
           <div className="h-1/2 translate-y-[100%] rounded-b-lg">
             <p className="bg-slate-600 h-2 w-[95%] rounded-md m-auto titleGradient"></p>
-            <div className="relative h-[100%] w-[95%] m-auto">
+            <div className="relative h-[100%] w-[95%] mx-auto mt-6">
               <p className="bg-slate-600 h-2 w-[50%] rounded-md gradient"></p>
               <p className="bg-slate-600 h-2 w-[50%] rounded-md gradient"></p>
               <p className="bg-slate-600 h-2 w-[50%] rounded-md gradient"></p>
@@ -17,7 +17,7 @@ const Shimmer = () => {
         <div className="h-[300px] w-60 bg-slate-700 m-2 rounded-lg">
           <div className="h-1/2 translate-y-[100%] rounded-b-lg">
             <p className="bg-slate-600 h-2 w-[95%] rounded-md m-auto titleGradient"></p>
-            <div className="relative h-[100%] w-[95%] m-auto">
+            <div className="relative h-[100%] w-[95%] mx-auto mt-6">
               <p className="bg-slate-600 h-2 w-[50%] rounded-md gradient"></p>
               <p className="bg-slate-600 h-2 w-[50%] rounded-md gradient"></p>
               <p className="bg-slate-600 h-2 w-[50%] rounded-md gradient"></p>
@@ -27,7 +27,7 @@ const Shimmer = () => {
         <div className="h-[300px] w-60 bg-slate-700 m-2 rounded-lg">
           <div className="h-1/2 translate-y-[100%] rounded-b-lg">
             <p className="bg-slate-600 h-2 w-[95%] rounded-md m-auto titleGradient"></p>
-            <div className="relative h-[100%] w-[95%] m-auto">
+            <div className="relative h-[100%] w-[95%] mx-auto mt-6">
               <p className="bg-slate-600 h-2 w-[50%] rounded-md gradient"></p>
               <p className="bg-slate-600 h-2 w-[50%] rounded-md gradient"></p>
               <p className="bg-slate-600 h-2 w-[50%] rounded-md gradient"></p>
@@ -37,7 +37,7 @@ const Shimmer = () => {
         <div className="h-[300px] w-60 bg-slate-700 m-2 rounded-lg">
           <div className="h-1/2 translate-y-[100%] rounded-b-lg">
             <p className="bg-slate-600 h-2 w-[95%] rounded-md m-auto titleGradient"></p>
-            <div className="relative h-[100%] w-[95%] m-auto">
+            <div className="relative h-[100%] w-[95%] mx-auto mt-6">
               <p className="bg-slate-600 h-2 w-[50%] rounded-md gradient"></p>
               <p className="bg-slate-600 h-2 w-[50%] rounded-md gradient"></p>
               <p className="bg-slate-600 h-2 w-[50%] rounded-md gradient"></p>
