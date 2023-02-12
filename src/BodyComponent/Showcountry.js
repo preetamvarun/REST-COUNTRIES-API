@@ -9,10 +9,8 @@ const Showcountry = () => {
 
   let data = useShowCountry(name);
 
-  console.log(data);
-
   return Object.keys(data).length === 0 ? (
-    <h1>Getting the data</h1>
+    <h1 className="text-center mt-6 text-white text-2xl">Getting The Country Data....</h1>
   ) : (
     <div className="text-white">
       <Link to="/" className="inline-block">
@@ -21,7 +19,7 @@ const Showcountry = () => {
           <span>Back</span>
         </div>
       </Link>
-      <div className="flex justify-evenly items-center relative">
+      <div className="flex flex-col justify-evenly items-start relative md:flex-row md:items-center ml-2 md:ml-0">
         <div className="overflow-hidden h-[250px] w-[300px]">
           <img src={data.flags.svg} alt={name} className="h-[100%] w-[100%] object-cover" />
         </div>
@@ -71,7 +69,7 @@ const Showcountry = () => {
           </p>
         </div>
       </div>
-      <div className="text-white w-[40%] relative left-1/2 -translate-x-1/2 mt-8 text-center">
+      <div className="text-white w-[80%] mb-1 md:w-[40%] relative left-1/2 -translate-x-1/2 mt-8 text-center">
         <span className="font-medium pl-1 text-sm">Border Countries : </span>
         {data.hasOwnProperty('borders') ? (
           data.borders.map(eachBorder => (

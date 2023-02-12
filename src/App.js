@@ -9,9 +9,14 @@ import { useState } from 'react';
 
 const AppLayout = () => {
   const [modeColor, setModeColor] = useState('Dark Mode');
+
+  function handleChange(modeColor) {
+    setModeColor(modeColor === 'Dark Mode' ? 'Light Mode' : 'Dark Mode');
+  }
+
   return (
     <React.Fragment>
-      <Header modeColor={modeColor} />
+      <Header modeColor={modeColor} onChange={handleChange} />
       <Outlet />
     </React.Fragment>
   );

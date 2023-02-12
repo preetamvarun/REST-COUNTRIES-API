@@ -1,19 +1,22 @@
 import { setBackgroundColor, setFontColor, setIcon } from '../utils/modeSetters';
 
-const Header = ({ modeColor }) => {
+const Header = ({ modeColor, onChange }) => {
+  const handleChange = () => onChange(modeColor);
+
   return (
-    <div className={`${setBackgroundColor(modeColor)} py-1`}>
+    <div className={`${setBackgroundColor(modeColor)} transition text-sm p-2`}>
       <div
-        className={`max-w-[1024px] m-auto flex justify-between align-middle ${setFontColor(
-          modeColor
-        )}`}
+        className={`flex justify-between align-middle
+        ${setFontColor(modeColor)} lg:max-w-[1024px] lg:m-auto`}
       >
-        <h1 className="py-4 ml-1 font-bold">Where In The World?</h1>
-        <div className="flex py-4 mr-1 hover:cursor-pointer">
+        <h1 className="py-4 ml-4 font-bold">Where In The World?</h1>
+        <div className="flex py-4 mr-4 hover:cursor-pointer" onClick={handleChange}>
           <span className="mr-1">
             <i className={`fa-solid fa-${setIcon(modeColor)}`}></i>
           </span>
-          <p className="font-bold">{modeColor === 'Dark Mode' ? 'Light Mode' : 'Dark Mode'}</p>
+          <p className="font-bold transition">
+            {modeColor === 'Dark Mode' ? 'Light Mode' : 'Dark Mode'}
+          </p>
         </div>
       </div>
     </div>
