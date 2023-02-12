@@ -5,9 +5,10 @@ import useFilterCountries from '../Hooks/useFilterCountries';
 import useFilterRegion from '../Hooks/useFilterRegion';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import { setBackgroundColor } from '../utils/modeSetters.js';
 import Shimmer from '../utils/Shimmer';
 
-const Countries = () => {
+const Countries = ({ modeColor }) => {
   const allCountries = useCountriesState();
 
   const [filteredCountries, setfilteredCountries] = useState([]);
@@ -39,7 +40,7 @@ const Countries = () => {
   return allCountries.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="bg-slate-800">
+    <div>
       <div className="flex justify-center items-start py-8 flex-col lg:flex lg:flex-row lg:items-center lg:justify-between lg:max-w-[1024px] lg:m-auto">
         <div className="bg-slate-700 rounded-md m-3 w-5/6 md:w-1/2 lg:w-1/3">
           <i className="fa-solid fa-magnifying-glass text-white relative pl-4 translate-y-[15%]"></i>
@@ -76,6 +77,7 @@ const Countries = () => {
                 population={eachCountry.population}
                 capital={eachCountry.capital !== undefined ? eachCountry.capital : 'No Capital'}
                 region={eachCountry.region}
+                modeColor={modeColor}
               />
             </Link>
           ))}

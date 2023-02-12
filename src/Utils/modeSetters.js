@@ -1,5 +1,5 @@
 export const setBackgroundColor = modeColor => {
-  return modeColor === 'Dark Mode' ? 'bg-slate-700' : 'bg-white';
+  return modeColor === 'Dark Mode' ? 'bg-slate-700' : 'bg-[#FAFAFA]';
 };
 
 export const setFontColor = modeColor => {
