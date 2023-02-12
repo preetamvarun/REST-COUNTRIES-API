@@ -20,7 +20,7 @@ const AppLayout = () => {
         <Header modeColor={modeColor} onChange={handleChange} />
         <Routes>
           <Route path="/" element={<Countries modeColor={modeColor} />} />
-          <Route path="/country/:name" element={<Showcountry />} />
+          <Route path="/country/:name" element={<Showcountry modeColor={modeColor} />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>

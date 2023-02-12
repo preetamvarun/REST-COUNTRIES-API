@@ -4,7 +4,10 @@ const Header = ({ modeColor, onChange }) => {
   const handleChange = () => onChange(modeColor);
 
   return (
-    <div className={`text-sm p-2 ${setFontColor(modeColor)} ${setBackgroundColor(modeColor)}`}>
+    <div
+      className={`text-sm p-2 ${setFontColor(modeColor)} ${setBackgroundColor(modeColor)}`}
+      style={{ boxShadow: '0 0 4px 3px rgb(0 0 0 / 10%)' }}
+    >
       <div className={`flex justify-between align-middle lg:max-w-[1024px] lg:m-auto`}>
         <h1 className="py-4 ml-4 font-bold">Where In The World?</h1>
         <div className="flex py-4 mr-4 hover:cursor-pointer" onClick={handleChange}>

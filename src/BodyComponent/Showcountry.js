@@ -4,17 +4,32 @@ import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { formatPopulation } from '../utils/populationFormatter';
 
-const Showcountry = () => {
+const Showcountry = ({ modeColor }) => {
   const { name } = useParams();
 
   let data = useShowCountry(name);
 
   return Object.keys(data).length === 0 ? (
-    <h1 className="text-center mt-6 text-white text-2xl">Getting The Country Data....</h1>
+    <h1 className={`text-center mt-6 text-white text-2xl`}>Getting The Country Data....</h1>
   ) : (
-    <div className="text-white">
-      <Link to="/" className="inline-block">
-        <div className="inline-block bg-slate-600 py-2 px-8 m-8 rounded-md">
+    <div
+      className={
+        modeColor === 'Dark Mode'
+          ? 'bg-slate-800 text-white min-h-screen'
+          : 'bg-[#FAFAFA] text-black min-h-screen'
+      }
+      style={{ boxShadow: '0 0 4px 3px rgb(0 0 0 / 10%)' }}
+    >
+      <Link
+        to="/"
+        className={`inline-block ${modeColor === 'Dark Mode' ? 'text-white' : 'text-black'}}`}
+      >
+        <div
+          className={`inline-block ${
+            modeColor === 'Dark Mode' ? 'bg-slate-600' : 'bg-white'
+          } py-2 px-8 m-8 rounded-md`}
+          style={{ boxShadow: '0 0 4px 3px rgb(0 0 0 / 10%)' }}
+        >
           <i className="fa-solid fa-arrow-left mr-1"></i>
           <span>Back</span>
         </div>
@@ -69,7 +84,11 @@ const Showcountry = () => {
           </p>
         </div>
       </div>
-      <div className="text-white w-[80%] mb-1 md:w-[40%] relative left-1/2 -translate-x-1/2 mt-8 text-center">
+      <div
+        className={`${
+          modeColor === 'Dark Mode' ? 'text-white bg-slate-800' : 'text-black bg-[#FAFAFA]'
+        } w-[80%] mb-1 md:w-[40%] relative left-1/2 -translate-x-1/2 mt-8 text-center`}
+      >
         <span className="font-medium pl-1 text-sm">Border Countries : </span>
         {data.hasOwnProperty('borders') ? (
           data.borders.map(eachBorder => (

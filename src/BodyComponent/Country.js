@@ -7,6 +7,7 @@ const Country = props => {
       className={`text-white m-2 rounded-lg h-[300px] w-64 lg:w-60 overflow-hidden ${setBackgroundColor(
         props.modeColor
       )} ${setFontColor(props.modeColor)}`}
+      style={{ boxShadow: '0 0 4px 3px rgb(0 0 0 / 10%)' }}
     >
       <div className="h-1/2 mb-2 opacity-80 hover:opacity-[100] hover:scale-110 duration-200">
         <img src={props.imageSrc} alt={props.name} className="w-[100%] h-[100%] object-cover" />

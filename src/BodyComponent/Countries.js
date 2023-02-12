@@ -38,11 +38,14 @@ const Countries = ({ modeColor }) => {
   }
 
   return allCountries.length === 0 ? (
-    <Shimmer />
+    <Shimmer modeColor={modeColor} />
   ) : (
     <div className={`${setCountriesBackgroundColor(modeColor)}`}>
       <div className="flex justify-center items-start py-8 flex-col lg:flex lg:flex-row lg:items-center lg:justify-between lg:max-w-[1024px] lg:m-auto">
-        <div className={`${setBackgroundColor(modeColor)} rounded-md m-3 w-5/6 md:w-1/2 lg:w-1/3`}>
+        <div
+          className={`${setBackgroundColor(modeColor)} rounded-md m-3 w-5/6 md:w-1/2 lg:w-1/3`}
+          style={{ boxShadow: '0 0 4px 3px rgb(0 0 0 / 10%)' }}
+        >
           <i className="fa-solid fa-magnifying-glass text-gray-500 relative pl-4 translate-y-[15%]"></i>
           <input
             type="text"
@@ -61,6 +64,7 @@ const Countries = ({ modeColor }) => {
             modeColor
           )} lg:mt-3 text-gray-500 text-[12px] rounded-sm py-3 pl-2 outline-none m-3 mt-1`}
           onChange={handleRegionFilter}
+          style={{ boxShadow: '0 0 4px 3px rgb(0 0 0 / 10%)' }}
         >
           <option value="Filter By Region">Filter By Region</option>
           <option>Asia</option>
