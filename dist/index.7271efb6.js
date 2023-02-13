@@ -27715,7 +27715,7 @@ $RefreshReg$(_c, "Countries");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Hooks/useShowAllCountries":"gknIg","./Country":"6lPf3","../Hooks/useFilterCountries":"7hQeO","../Hooks/useFilterRegion":"iofe7","react-router-dom":"9xmpe","uuid":"j4KJi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/Shimmer":"gOmrP","../utils/modesetters.js":"cftvs"}],"gknIg":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Hooks/useShowAllCountries":"gknIg","./Country":"6lPf3","../Hooks/useFilterCountries":"7hQeO","../Hooks/useFilterRegion":"iofe7","react-router-dom":"9xmpe","uuid":"j4KJi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/modesetters.js":"cftvs","../utils/Shimmer":"gOmrP"}],"gknIg":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9514 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33586,7 +33586,7 @@ $RefreshReg$(_c, "Shimmer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./Shimmer.css":"aO3OI"}],"aO3OI":[function() {},{}],"9QZYD":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./Shimmer.css":"aO3OI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aO3OI":[function() {},{}],"9QZYD":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4ce2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
