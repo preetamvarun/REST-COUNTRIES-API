@@ -7,6 +7,7 @@ const Shimmer = ({ modeColor }) => {
         modeColor === 'Dark Mode' ? 'bg-slate-700' : 'bg-white'
       }`}
       key={index}
+      style={{ boxShadow: '0 0 4px 3px rgb(0 0 0 / 10%)' }}
     >
       <div className="h-1/2 translate-y-[100%] rounded-b-lg">
         <p className="bg-slate-600 h-2 w-[95%] rounded-md m-auto titleGradient"></p>
