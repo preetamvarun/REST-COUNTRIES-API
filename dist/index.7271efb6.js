@@ -27232,7 +27232,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _modesetters = require("../utils/modesetters");
+var _modesetters = require("../Utils/modesetters");
 const Header = ({ modeColor , onChange  })=>{
     const handleChange = ()=>onChange(modeColor);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27307,7 +27307,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/modesetters":"cftvs"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Utils/modesetters":"4FoXd"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27470,7 +27470,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"9039066dc875b8f9":"786KC"}],"cftvs":[function(require,module,exports) {
+},{"9039066dc875b8f9":"786KC"}],"4FoXd":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "setBackgroundColor", ()=>setBackgroundColor);
@@ -27511,8 +27511,8 @@ var _useFilterRegion = require("../Hooks/useFilterRegion");
 var _useFilterRegionDefault = parcelHelpers.interopDefault(_useFilterRegion);
 var _reactRouterDom = require("react-router-dom");
 var _uuid = require("uuid");
-var _modesettersJs = require("../utils/modesetters.js");
-var _shimmer = require("../utils/Shimmer");
+var _modesettersJs = require("../Utils/modesetters.js");
+var _shimmer = require("../Utils/Shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _s = $RefreshSig$();
 const Countries = ({ modeColor  })=>{
@@ -27715,7 +27715,7 @@ $RefreshReg$(_c, "Countries");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Hooks/useShowAllCountries":"gknIg","./Country":"6lPf3","../Hooks/useFilterCountries":"7hQeO","../Hooks/useFilterRegion":"iofe7","react-router-dom":"9xmpe","uuid":"j4KJi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/modesetters.js":"cftvs","../utils/Shimmer":"gOmrP"}],"gknIg":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../Hooks/useShowAllCountries":"gknIg","./Country":"6lPf3","../Hooks/useFilterCountries":"7hQeO","../Hooks/useFilterRegion":"iofe7","react-router-dom":"9xmpe","uuid":"j4KJi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Utils/modesetters.js":"4FoXd","../Utils/Shimmer":"8Bzrs"}],"gknIg":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9514 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27724,7 +27724,7 @@ $parcel$ReactRefreshHelpers$9514.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _config = require("../utils/Config");
+var _config = require("../Utils/Config");
 var _react = require("react");
 var _s = $RefreshSig$();
 const useCountriesState = ()=>{
@@ -27748,7 +27748,7 @@ exports.default = useCountriesState;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/Config":"2LWAI"}],"2LWAI":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Utils/Config":"hLiA6"}],"hLiA6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "API_URL", ()=>API_URL);
@@ -27766,8 +27766,8 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _modesetters = require("../utils/modesetters");
-var _populationformatter = require("../utils/populationformatter");
+var _modesetters = require("../Utils/modesetters");
+var _populationformatter = require("../Utils/populationformatter");
 const Country = (props)=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: `text-white my-2 mx-1 rounded-lg h-[300px] w-64 lg:w-60 overflow-hidden ${(0, _modesetters.setBackgroundColor)(props.modeColor)} ${(0, _modesetters.setFontColor)(props.modeColor)} `,
@@ -27883,7 +27883,7 @@ $RefreshReg$(_c, "Country");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/modesetters":"cftvs","../utils/populationformatter":"gXUEp"}],"gXUEp":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Utils/modesetters":"4FoXd","../Utils/populationformatter":"idNua"}],"idNua":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "formatPopulation", ()=>formatPopulation);
@@ -33491,11 +33491,11 @@ function version(uuid) {
 }
 exports.default = version;
 
-},{"./validate.js":"eHPgI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gOmrP":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7e03 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"./validate.js":"eHPgI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8Bzrs":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9ac3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7e03.prelude(module);
+$parcel$ReactRefreshHelpers$9ac3.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -33516,7 +33516,7 @@ const Shimmer = ({ modeColor  })=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         className: "bg-slate-600 h-2 w-[95%] rounded-md m-auto titleGradient"
                     }, void 0, false, {
-                        fileName: "src/utils/Shimmer.js",
+                        fileName: "src/Utils/Shimmer.js",
                         lineNumber: 13,
                         columnNumber: 9
                     }, undefined),
@@ -33526,38 +33526,38 @@ const Shimmer = ({ modeColor  })=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 className: "bg-slate-600 h-2 w-[50%] rounded-md gradient"
                             }, void 0, false, {
-                                fileName: "src/utils/Shimmer.js",
+                                fileName: "src/Utils/Shimmer.js",
                                 lineNumber: 15,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 className: "bg-slate-600 h-2 w-[50%] rounded-md gradient"
                             }, void 0, false, {
-                                fileName: "src/utils/Shimmer.js",
+                                fileName: "src/Utils/Shimmer.js",
                                 lineNumber: 16,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 className: "bg-slate-600 h-2 w-[50%] rounded-md gradient"
                             }, void 0, false, {
-                                fileName: "src/utils/Shimmer.js",
+                                fileName: "src/Utils/Shimmer.js",
                                 lineNumber: 17,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
-                        fileName: "src/utils/Shimmer.js",
+                        fileName: "src/Utils/Shimmer.js",
                         lineNumber: 14,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/utils/Shimmer.js",
+                fileName: "src/Utils/Shimmer.js",
                 lineNumber: 12,
                 columnNumber: 7
             }, undefined)
         }, index, false, {
-            fileName: "src/utils/Shimmer.js",
+            fileName: "src/Utils/Shimmer.js",
             lineNumber: 5,
             columnNumber: 5
         }, undefined));
@@ -33566,12 +33566,12 @@ const Shimmer = ({ modeColor  })=>{
             className: "flex justify-center flex-wrap items-center lg:max-w-[1300px] lg:m-auto xl:max-w-[1400px] xl:m-auto 2xl:max-w-[1536px] 2xl:m-auto",
             children: shimmers
         }, void 0, false, {
-            fileName: "src/utils/Shimmer.js",
+            fileName: "src/Utils/Shimmer.js",
             lineNumber: 24,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
-        fileName: "src/utils/Shimmer.js",
+        fileName: "src/Utils/Shimmer.js",
         lineNumber: 23,
         columnNumber: 5
     }, undefined);
@@ -33581,12 +33581,12 @@ exports.default = Shimmer;
 var _c;
 $RefreshReg$(_c, "Shimmer");
 
-  $parcel$ReactRefreshHelpers$7e03.postlude(module);
+  $parcel$ReactRefreshHelpers$9ac3.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Shimmer.css":"aO3OI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aO3OI":[function() {},{}],"9QZYD":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./Shimmer.css":"gzJp2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gzJp2":[function() {},{}],"9QZYD":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4ce2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33598,7 +33598,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
 var _uuid = require("uuid");
-var _populationformatter = require("../utils/populationformatter");
+var _populationformatter = require("../Utils/populationformatter");
 var _useShowAllCountries = require("../Hooks/useShowAllCountries");
 var _useShowAllCountriesDefault = parcelHelpers.interopDefault(_useShowAllCountries);
 var _react = require("react");
@@ -33930,7 +33930,7 @@ $RefreshReg$(_c, "Showcountry");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","uuid":"j4KJi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Hooks/useShowAllCountries":"gknIg","react":"21dqq","../utils/populationformatter":"gXUEp"}],"g5bIt":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","uuid":"j4KJi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../Hooks/useShowAllCountries":"gknIg","react":"21dqq","../Utils/populationformatter":"idNua"}],"g5bIt":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5212 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

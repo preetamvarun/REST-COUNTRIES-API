@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import { formatPopulation } from '../utils/populationformatter';
+import { formatPopulation } from '../Utils/populationformatter';
 import useCountriesState from '../Hooks/useShowAllCountries';
 import { useEffect, useState } from 'react';
 
