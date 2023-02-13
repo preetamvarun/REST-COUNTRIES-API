@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@parcel/transformer-react-refresh-wrap": "^2.8.3",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.10",
     "i": "^0.3.7",
     "npm": "^9.4.1",
     "parcel": "^2.8.3",

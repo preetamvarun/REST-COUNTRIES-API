@@ -1,15 +1,35 @@
 import { useParams } from 'react-router-dom';
-import { useShowCountry } from '../Hooks/useShowCountry';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { formatPopulation } from '../utils/populationFormatter';
+import useCountriesState from '../Hooks/useShowAllCountries';
+import { useEffect, useState } from 'react';
 
 const Showcountry = ({ modeColor }) => {
   const { name } = useParams();
 
-  let data = useShowCountry(name);
+  const allCountries = useCountriesState();
 
-  return Object.keys(data).length === 0 ? (
+  const [dataArr, setData] = useState([]);
+
+  let data = dataArr[0];
+
+  useEffect(() => {
+    if (allCountries) {
+      setData(allCountries.filter(country => country.name.common === name));
+    }
+  }, [name, allCountries]);
+
+  function getCountryName(cca3) {
+    return allCountries.filter(country => country.cca3 === cca3)[0].name.common;
+  }
+
+  function displayBorderLinks(bordersArr) {
+    const borderCountries = bordersArr.map(cca3 => getCountryName(cca3));
+    return borderCountries;
+  }
+
+  return dataArr.length === 0 ? (
     <div
       className={`text-center text-2xl pt-4
     ${
@@ -41,12 +61,15 @@ const Showcountry = ({ modeColor }) => {
           <span>Back</span>
         </div>
       </Link>
-      <div className="flex flex-col justify-evenly items-start relative md:flex-row md:items-center ml-2 md:ml-0">
-        <div className="overflow-hidden h-[250px] w-[300px]">
+      <div
+        className="flex flex-col justify-evenly items-start relative md:flex-row 
+      md:items-center ml-2 md:ml-0"
+      >
+        <div className="overflow-hidden h-[250px] w-[300px] md:mr-4">
           <img src={data.flags.svg} alt={name} className="h-[100%] w-[100%] object-cover" />
         </div>
         <div className="mb-3">
-          <p className="font-bold py-[2px]">{data.name.official || 'No Name'}</p>
+          <p className="font-bold py-[2px]">{data.name.common || 'No Name'}</p>
           <div className="mt-3">
             <p className="py-[2px]">
               <span className="font-medium">Native name : </span>
@@ -98,10 +121,17 @@ const Showcountry = ({ modeColor }) => {
       >
         <span className="font-medium pl-1 text-sm">Border Countries : </span>
         {data.hasOwnProperty('borders') ? (
-          data.borders.map(eachBorder => (
-            <p key={uuidv4()} className="inline-block p-1 text-sm">
-              {eachBorder}
-            </p>
+          displayBorderLinks(data.borders).map(ele => (
+            <Link
+              style={{ boxShadow: '0 0 4px 3px rgb(0 0 0 / 10%)' }}
+              key={uuidv4()}
+              to={`/country/${ele}`}
+              className={`inline-block m-1 px-2 py-1 ${
+                modeColor === 'Dark Mode' ? 'bg-slate-700 text-white' : 'bg-white text-black'
+              }`}
+            >
+              {ele}
+            </Link>
           ))
         ) : (
           <p className="inline-block text-xs font-light"> No borders... </p>
@@ -112,3 +142,4 @@ const Showcountry = ({ modeColor }) => {
 };
 
 export default Showcountry;
+// <p className="inline-block px-2 py-1 text-sm bg-slate-700 m-1">{eachBorder}</p>
