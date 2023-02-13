@@ -10,7 +10,14 @@ const Showcountry = ({ modeColor }) => {
   let data = useShowCountry(name);
 
   return Object.keys(data).length === 0 ? (
-    <h1 className={`text-center mt-6 text-white text-2xl`}>Getting The Country Data....</h1>
+    <div
+      className={`text-center text-2xl pt-4
+    ${
+      modeColor === 'Dark Mode' ? 'bg-slate-800 text-white' : 'bg-[#FAFAFA] text-black'
+    } min-h-screen`}
+    >
+      Getting The Country Data....
+    </div>
   ) : (
     <div
       className={

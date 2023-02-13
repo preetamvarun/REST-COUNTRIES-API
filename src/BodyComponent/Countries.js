@@ -74,7 +74,7 @@ const Countries = ({ modeColor }) => {
         </select>
       </div>
       {allCountries.length === 0 ? (
-        <Shimmer />
+        <Shimmer modeColor={modeColor} />
       ) : (
         <div className="flex justify-center flex-wrap items-center lg:max-w-[1300px] lg:m-auto xl:max-w-[1400px] xl:m-auto 2xl:max-w-[1536px] 2xl:m-auto">
           {filteredCountries.map(eachCountry => (
