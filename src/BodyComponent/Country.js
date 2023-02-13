@@ -1,5 +1,5 @@
-import { setBackgroundColor, setFontColor } from '../utils/modeSetters';
-import { formatPopulation } from '../utils/populationFormatter';
+import { setBackgroundColor, setFontColor } from '../utils/modesetters';
+import { formatPopulation } from '../utils/populationformatter';
 
 const Country = props => {
   return (

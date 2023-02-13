@@ -5,7 +5,7 @@ import useFilterCountries from '../Hooks/useFilterCountries';
 import useFilterRegion from '../Hooks/useFilterRegion';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import { setBackgroundColor, setCountriesBackgroundColor } from '../utils/modeSetters.js';
+import { setBackgroundColor, setCountriesBackgroundColor } from '../utils/modesetters.js';
 import Shimmer from '../utils/Shimmer';
 
 const Countries = ({ modeColor }) => {
