@@ -74,7 +74,7 @@ const Showcountry = ({ modeColor }) => {
             <img src={data.flags.svg} alt={name} className="h-full w-full object-cover" />
           </div>
           <div className="mb-3">
-            <p className="font-bold py-[2px]">{data.name.common || 'No Name'}</p>
+            <p className="font-bold py-[2px] text-xl mt-2">{data.name.common || 'No Name'}</p>
             <div className="mt-3">
               <p className="py-[2px]">
                 <span className="font-medium">Native name : </span>
@@ -102,7 +102,7 @@ const Showcountry = ({ modeColor }) => {
           </div>
         </div>
 
-        <div className="p-2 md:flex-1 md:w-0 lg:w-0 lg:flex-1 ml-[10px] sm:ml-0">
+        <div className="p-2 md:flex-1 md:w-0 lg:w-0 lg:flex-1 ml-[12px] lg:ml-0">
           <p>
             <span className="font-semibold">Top Level Domain : </span>
             {data.tld[0] || 'No top level domain'}
@@ -115,7 +115,7 @@ const Showcountry = ({ modeColor }) => {
           </p>
           <div>
             <p className="break-words">
-              <strong>Languages : </strong>
+              <span className="font-semibold">Languages : </span>
               <p>{getLanguages(data)}</p>
             </p>
           </div>
