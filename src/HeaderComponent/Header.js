@@ -1,4 +1,4 @@
-import { setBackgroundColor, setFontColor, setIcon } from '../utils/modeSetters';
+import { setBackgroundColor, setFontColor, setIcon } from '../Utils/modeSetters';
 
 const Header = ({ modeColor, onChange }) => {
   const handleChange = () => onChange(modeColor);
