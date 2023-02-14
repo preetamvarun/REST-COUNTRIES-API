@@ -1,4 +1,4 @@
-import { API_URL } from '../Utils/Config';
+import { API_URL } from '../utils/Config';
 import { useState, useEffect } from 'react';
 
 const useCountriesState = () => {
