@@ -14,6 +14,12 @@ const Showcountry = ({ modeColor }) => {
 
   let data = dataArr[0];
 
+  function getLanguages(data) {
+    return data.hasOwnProperty('languages')
+      ? Object.values(data.languages).join(',')
+      : 'No languages';
+  }
+
   useEffect(() => {
     if (allCountries) {
       setData(allCountries.filter(country => country.name.common === name));
@@ -61,41 +67,42 @@ const Showcountry = ({ modeColor }) => {
           <span>Back</span>
         </div>
       </Link>
-      <div
-        className="flex flex-col justify-evenly items-start relative md:flex-row 
-      md:items-center ml-2 md:ml-0"
-      >
-        <div className="overflow-hidden h-[250px] w-[300px] md:mr-4">
-          <img src={data.flags.svg} alt={name} className="h-[100%] w-[100%] object-cover" />
-        </div>
-        <div className="mb-3">
-          <p className="font-bold py-[2px]">{data.name.common || 'No Name'}</p>
-          <div className="mt-3">
-            <p className="py-[2px]">
-              <span className="font-medium">Native name : </span>
-              {data.name.hasOwnProperty('nativeName')
-                ? Object.values(data.name.nativeName).splice(-1)[0].official
-                : 'No native name'}
-            </p>
-            <p className="py-1">
-              <span className="font-medium">Population : </span>
-              {formatPopulation(Number(data.population)) || 'No population'}
-            </p>
-            <p className="py-1">
-              <span className="font-medium">Region : </span>
-              {data.region || 'No region'}
-            </p>
-            <p className="py-1">
-              <span className="font-medium">Sub Region : </span>
-              {data.subregion || 'No sub region'}
-            </p>
-            <p className="py-1">
-              <span className="font-medium">Capital : </span>
-              {data.hasOwnProperty('capital') ? data.capital[0] : 'No capital'}
-            </p>
+
+      <div className="flex flex-col ml-2 md:flex-row md:items-start">
+        <div className="flex flex-col p-2md:flex-1 md:w-0 lg:flex-row lg:flex-[2] lg:w-0">
+          <div className="lg:w-[38rem] lg:mr-4">
+            <img src={data.flags.svg} alt={name} className="h-full w-full object-cover" />
+          </div>
+          <div className="mb-3">
+            <p className="font-bold py-[2px]">{data.name.common || 'No Name'}</p>
+            <div className="mt-3">
+              <p className="py-[2px]">
+                <span className="font-medium">Native name : </span>
+                {data.name.hasOwnProperty('nativeName')
+                  ? Object.values(data.name.nativeName).splice(-1)[0].official
+                  : 'No native name'}
+              </p>
+              <p className="py-1">
+                <span className="font-medium">Population : </span>
+                {formatPopulation(Number(data.population)) || 'No population'}
+              </p>
+              <p className="py-1">
+                <span className="font-medium">Region : </span>
+                {data.region || 'No region'}
+              </p>
+              <p className="py-1">
+                <span className="font-medium">Sub Region : </span>
+                {data.subregion || 'No sub region'}
+              </p>
+              <p className="py-1">
+                <span className="font-medium">Capital : </span>
+                {data.hasOwnProperty('capital') ? data.capital[0] : 'No capital'}
+              </p>
+            </div>
           </div>
         </div>
-        <div>
+
+        <div className="p-2 md:flex-1 md:w-0 lg:w-0 lg:flex-1">
           <p>
             <span className="font-semibold">Top Level Domain : </span>
             {data.tld[0] || 'No top level domain'}
@@ -106,14 +113,15 @@ const Showcountry = ({ modeColor }) => {
               ? Object.values(data.currencies)[0].name
               : 'No currencies'}
           </p>
-          <p>
-            <span className="font-semibold">Languages : </span>
-            {data.hasOwnProperty('languages')
-              ? Object.values(data.languages).join(',')
-              : 'No languages'}
-          </p>
+          <div>
+            <p className="break-words">
+              <strong>Languages : </strong>
+              <p>{getLanguages(data)}</p>
+            </p>
+          </div>
         </div>
       </div>
+
       <div
         className={`${
           modeColor === 'Dark Mode' ? 'text-white bg-slate-800' : 'text-black bg-[#FAFAFA]'
