@@ -69,8 +69,8 @@ const Showcountry = ({ modeColor }) => {
       </Link>
 
       <div className="flex flex-col ml-2 md:flex-row md:items-start">
-        <div className="flex flex-col pr-2 scale-90 sm:scale-[100%]  md:flex-1 md:w-0 lg:flex-row lg:flex-[2] lg:w-0">
-          <div className="lg:w-[38rem] lg:mr-4">
+        <div className="flex flex-col pr-2 scale-90 sm:scale-[100%] md:flex-1 md:w-0 xl:flex-row xl:flex-[2] xl:w-0">
+          <div className="xl:w-[38rem] xl:mr-4">
             <img src={data.flags.svg} alt={name} className="h-full w-full object-cover" />
           </div>
           <div className="mb-3">
@@ -102,7 +102,7 @@ const Showcountry = ({ modeColor }) => {
           </div>
         </div>
 
-        <div className="p-2 md:flex-1 md:w-0 lg:w-0 lg:flex-1 ml-[12px] lg:ml-0">
+        <div className="p-2 md:flex-1 md:w-0 xl:w-0 xl:flex-1 ml-[12px] xl:ml-0">
           <p>
             <span className="font-semibold">Top Level Domain : </span>
             {data.tld[0] || 'No top level domain'}
