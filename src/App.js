@@ -16,7 +16,7 @@ const AppLayout = () => {
 
   return (
     <BrowserRouter>
-      <div>
+      <div className={`h-[100vh] ${modeColor === 'Dark Mode' ? 'bg-slate-800' : 'bg-[#FAFAFA]'} `}>
         <Header modeColor={modeColor} onChange={handleChange} />
         <Routes>
           <Route path="/" element={<Countries modeColor={modeColor} />} />
@@ -28,26 +28,6 @@ const AppLayout = () => {
   );
 };
 
-// const appRouter = createBrowserRouter([
-//   {
-//     path: '/',
-//     element: <AppLayout />,
-//     errorElement: <Error />,
-//     children: [
-//       {
-//         path: '/',
-//         element: <Countries />
-//       },
-//       {
-//         path: '/country/:name',
-//         element: <Showcountry />
-//       }
-//     ]
-//   }
-// ]);
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(<AppLayout />);
-
-// root.render(<RouterProvider router={appRouter} />);

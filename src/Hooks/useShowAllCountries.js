@@ -7,7 +7,7 @@ const useCountriesState = () => {
   async function getCountries() {
     const info = await fetch(API_URL);
     const json = await info.json();
-    setTimeout(() => setallCountries(json), 2000);
+    setTimeout(() => setallCountries(json), 1000);
   }
 
   useEffect(() => {
